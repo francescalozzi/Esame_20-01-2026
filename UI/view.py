@@ -42,7 +42,7 @@ class View:
         #row3
         self.txtMaxArtists = ft.TextField( label="Numero massimo artisti", width=300, disabled=True)
         self.txtMinDuration = ft.TextField( label="Durata minima (minuti)", width=250, disabled=True)
-        self.btnSearchArtists = ft.ElevatedButton(text="Cerca cammino da artista", disabled=True)
+        self.btnSearchArtists = ft.ElevatedButton(text="Cerca cammino da artista", disabled=True, on_click = self._controller.handle_search_path)
         row3 = ft.Row([self.txtMinDuration, self.txtMaxArtists, self.btnSearchArtists],
                       alignment=ft.MainAxisAlignment.CENTER)
         self._page.controls.append(row3)
